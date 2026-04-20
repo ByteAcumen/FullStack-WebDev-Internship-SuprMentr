@@ -1,0 +1,61 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Logo Styling */
+.logo {
+  height: 6rem;
+  padding: 1.5rem;
+  will-change: filter, transform;
+  transition: filter 300ms ease, transform 300ms ease;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #3b82f6aa);
+  transform: scale(1.05);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #3b82f6);
+}
+
+/* Spin animation for logos */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Only spin if user allows animations */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card component styling */
+.card {
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
+}
+
+/* Documentation text */
+.read-the-docs {
+  color: #64748b;
+  font-size: 0.9rem;
+}

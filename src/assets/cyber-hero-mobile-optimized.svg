@@ -1,0 +1,81 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1e40af;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="glowEffect" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGradient)"/>
+  
+  <!-- Symbolic Circuit Pattern -->
+  <g opacity="0.15">
+    <defs>
+      <pattern id="circuit" width="60" height="60" patternUnits="userSpaceOnUse">
+        <circle cx="30" cy="30" r="2" fill="#60a5fa"/>
+        <line x1="0" y1="30" x2="60" y2="30" stroke="#60a5fa" stroke-width="0.5"/>
+        <line x1="30" y1="0" x2="30" y2="60" stroke="#60a5fa" stroke-width="0.5"/>
+      </pattern>
+    </defs>
+    <rect width="800" height="600" fill="url(#circuit)" />
+  </g>
+  
+  <!-- Central Shield Symbol -->
+  <g transform="translate(400,300)">
+    <!-- Glow Effect -->
+    <circle r="120" fill="url(#glowEffect)"/>
+    
+    <!-- Main Shield -->
+    <path d="M-50,-70 L50,-70 L50,0 C50,40 20,70 0,80 C-20,70 -50,40 -50,0 Z" 
+          fill="#3673dc" stroke="#60a5fa" stroke-width="3"/>
+    
+    <!-- Shield Inner Pattern -->
+    <path d="M-30,-50 L30,-50 L30,-10 C30,20 10,40 0,50 C-10,40 -30,20 -30,-10 Z" 
+          fill="none" stroke="#93c5fd" stroke-width="2"/>
+    
+    <!-- Lock Icon in Shield -->
+    <g transform="translate(0,-15)">
+      <rect x="-10" y="0" width="20" height="24" rx="3" fill="#93c5fd"/>
+      <path d="M-7,-10 C-7,-14 -4,-17 0,-17 C4,-17 7,-14 7,-10 L7,2 L-7,2 Z" 
+            fill="none" stroke="#93c5fd" stroke-width="3"/>
+      <circle cx="0" cy="10" r="3" fill="#1e40af"/>
+    </g>
+  </g>
+  
+  <!-- Decorative Elements -->
+  <g opacity="0.3">
+    <!-- Top Left Hexagon -->
+    <polygon points="120,120 140,130 140,150 120,160 100,150 100,130" 
+             fill="none" stroke="#60a5fa" stroke-width="2"/>
+              
+    <!-- Top Right Hexagon -->
+    <polygon points="680,150 700,160 700,180 680,190 660,180 660,160" 
+             fill="none" stroke="#60a5fa" stroke-width="2"/>
+             
+    <!-- Bottom Left Hexagon -->
+    <polygon points="150,450 170,460 170,480 150,490 130,480 130,460" 
+             fill="none" stroke="#60a5fa" stroke-width="2"/>
+  </g>
+  
+  <!-- Floating Data Nodes -->
+  <g opacity="0.4">
+    <circle cx="180" cy="180" r="8" fill="#60a5fa"/>
+    <circle cx="620" cy="200" r="6" fill="#60a5fa"/>
+    <circle cx="220" cy="420" r="7" fill="#60a5fa"/>
+    <circle cx="580" cy="440" r="5" fill="#60a5fa"/>
+  </g>
+  
+  <!-- Binary Code Elements -->
+  <g opacity="0.15" fill="#60a5fa" font-family="monospace" font-size="14" font-weight="300">
+    <text x="100" y="80">1010101</text>
+    <text x="650" y="100">1100110</text>
+    <text x="80" y="350">1110001</text>
+    <text x="620" y="500">0101110</text>
+  </g>
+</svg>
